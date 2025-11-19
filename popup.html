@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tunnel Rule Assistant</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tunnel Rule</h1>
+    </header>
+    
+    <div class="card">
+      <div class="info-row">
+        <span class="label">Domain</span>
+        <span class="value" id="domainValue">Loading...</span>
+      </div>
+      
+      <div class="status-container" id="statusContainer">
+        <div class="loader"></div>
+        <span class="status-text">Resolving IP...</span>
+      </div>
+
+      <div id="resultContainer" class="hidden">
+        <div class="info-row">
+          <span class="label">Type</span>
+          <span class="value" id="typeValue">-</span>
+        </div>
+        <div class="info-row">
+          <span class="label">IP Address</span>
+          <span class="value code" id="ipValue">-</span>
+        </div>
+      </div>
+    </div>
+
+    <button id="addRuleBtn" disabled>
+      <span>Copy Rule to Clipboard</span>
+    </button>
+    
+    <div id="message" class="message hidden">Copied!</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
